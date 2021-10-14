@@ -23,6 +23,6 @@ script:
   - docker run delchan/react-test npm test
 deploy:
   provider: script
-  script: bash ./deploy.sh
+  script: deploy.sh
   on:
     branch: master
