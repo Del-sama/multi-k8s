@@ -23,6 +23,6 @@ script:
   - docker run delchan/react-test npm test -- --coverage --watchAll=false
 deploy:
   provider: script
-  script: deploy.sh
+  script: bash ./deploy.sh
   on:
     branch: master
