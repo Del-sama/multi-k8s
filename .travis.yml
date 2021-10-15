@@ -20,7 +20,7 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t delchan/react-test -f ./client/Dockerfile.dev ./client
 script:
-  - docker run delchan/react-test npm test
+  - docker run delchan/react-test npm test -- --coverage --watchAll=false
 deploy:
   provider: script
   script: deploy.sh
